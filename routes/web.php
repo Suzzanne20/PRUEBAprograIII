@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/', [TransporteController::class, 'index1'])->name('transporte.index');
+Route::get('/create', [TransporteController::class, 'create1'])->name('transporte.create');
+Route::get('/edit', [TransporteController::class, 'edit1'])->name('transporte.edit');
