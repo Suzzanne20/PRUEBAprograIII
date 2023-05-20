@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TransporteController;
+use App\Http\Controllers\TipoMercaController;
+use App\Http\Controllers\MercanciaController;
 
 /*
 |--------------------------------------------------------------------------

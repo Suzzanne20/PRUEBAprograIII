@@ -2,63 +2,63 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Transporte;
 use Illuminate\Http\Request;
 
 class TransporteController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
+   
+    public function index1()
     {
-        //
+        $datos = Transporte::all();
+        return view('inicio', compact('datos'));
+
+
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+ 
+    public function create1()
     {
         //
+        return view ('agg');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
+    public function store1(Request $request)
     {
-        //
+        $transporte = new Transporte(); 
+        $transporte -> nombre = $request->post('nombre');
+        $transporte -> razon_social = $request->post('razon_social');
+        $transporte -> save();
+
+        return redirect() -> route("transporte.index") -> with("success", "Se ah registrado");
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
+    public function show1(Transporte $transporte)
     {
-        //
+        return view('eliminar', compact('transporte'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
+    public function edit1(Transporte $transporte)
     {
-        //
+        $transporte = Transporte::find($id);
+        return view('actualizar', compact('transporte'));
+
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
+    public function update1(Request $request, Transporte $transporte)
     {
-        //
+        $transporte = Transporte::find($id);
+        $transporte -> nombre = $request->post('nombre');
+        $transporte -> razon_social = $request->post('razon_social');
+        $transporte -> save();
+
+        return redirect() -> route("transporte.index") -> with("success", "Se ah Actualizado!");
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
+    public function destroy1(Transporte $transporte)
     {
-        //
+        $transporte = Transporte::find($id);
+        $transporte->delete();
+        return redirect()->route("transporte.index")->with("success", "Eliminado");
     }
 }

@@ -31,7 +31,7 @@
  
                 <div class="input-group input-group-lg">
                     <span class="input-group-text col-4" id="inputGroup-sizing-lg">Nombre</span>
-                    <input type="text" class="" name="nombre" required>
+                    <input type="text" class="form-control" name="nombre" required>
                 </div>
                 <div class="input-group input-group-lg">
                     <span class="input-group-text col-4" id="inputGroup-sizing-lg">Razon Social</span>
