@@ -19,6 +19,7 @@ use App\Http\Controllers\MercanciaController;
 */
 
 Route::get('/ ', function () { return view('home'); });
+Route::get('/error', function(){ return view('error');});
 
 Route::get('/transporte', [TransporteController::class, 'index1'])->name('transporte.index');
 Route::get('/create',[TransporteController::class,'create1'])->name('transporte.create');

@@ -33,7 +33,7 @@ class Handler extends ExceptionHandler
     {
     if ($exception instanceof \Illuminate\Database\Eloquent\ModelNotFoundException) {
         //Manejo de Error en Modelos
-        return response()->view('errors.custom', [], 404);
+        return response()->view('error', [], 404);
     }
 
     return parent::render($request, $exception);

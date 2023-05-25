@@ -14,7 +14,7 @@
         <div class="container-fluid">
           <img src="https://www.pngall.com/wp-content/uploads/5/Vector-Truck.png" height="40">
           <h3 class="col-2">Neko Transporte</h3> 
-          <a class="navbar-brand" href="{{ route('/home') }}" >Inicio</a>
+          <a class="navbar-brand" href="resource/views/home.blade.php" >Inicio</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -22,6 +22,9 @@
             <ul class="navbar-nav">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="{{ route('transporte.index') }}">Transportes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="{{ route('camion.index') }}">Camiones</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active" href="{{ route('camion.index') }}">Camiones</a>
