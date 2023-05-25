@@ -12,14 +12,11 @@ class TransporteController extends Controller
     {
         $datos = Transporte::all();
         return view('inicio', compact('datos'));
-
-
     }
 
  
     public function create1()
     {
-        //
         return view ('agg');
     }
 
@@ -30,7 +27,7 @@ class TransporteController extends Controller
         $transporte -> razon_social = $request->post('razon_social');
         $transporte -> save();
 
-        return redirect() -> route("transporte.index") -> with("success", "Se ah registrado");
+        return redirect() -> route("transporte.index1") -> with("success", "Se ah registrado");
     }
 
     public function show1(Transporte $transporte)

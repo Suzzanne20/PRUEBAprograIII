@@ -31,11 +31,23 @@
             <form action="">
  
                 <div class="input-group input-group-lg">
-                    <span class="input-group-text col-4" id="inputGroup-sizing-lg">Nombre</span>
+                    <span class="input-group-text col-4" id="inputGroup-sizing-lg">Placa</span>
                     <input type="text" class="form-control" name="nombre" required>
                 </div>
                 <div class="input-group input-group-lg">
-                    <span class="input-group-text col-4" id="inputGroup-sizing-lg">Razon Social</span>
+                    <span class="input-group-text col-4" id="inputGroup-sizing-lg">Marca</span>
+                    <input type="text" class="form-control" name="nombre" required>
+                </div>
+                <div class="input-group input-group-lg">
+                    <span class="input-group-text col-4" id="inputGroup-sizing-lg">Color</span>
+                    <input type="text" class="form-control" name="nombre" required>
+                </div>
+                <div class="input-group input-group-lg">
+                    <span class="input-group-text col-4" id="inputGroup-sizing-lg">Modelo</span>
+                    <input type="text" class="form-control" name="nombre" required>
+                </div>
+                <div class="input-group input-group-lg">
+                    <span class="input-group-text col-4" id="inputGroup-sizing-lg">Capacidad</span>
                     <input type="text" class="form-control" name="rsocial" required>
                 </div>
                 <br><br>

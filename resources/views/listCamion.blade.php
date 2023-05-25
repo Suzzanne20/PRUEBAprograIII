@@ -1,7 +1,7 @@
 @extends('layout/plantilla')
 @section('tituloPagina', 'Neko')
 @section('navbar')
-@section('contenido')  
+@section('contenido')
 
 <br><br>
 <div class="card">
@@ -17,17 +17,25 @@
             <table class="table table-dark table-hover">
                 <thead>
                     <th>Id</th>
-                    <th>Nombre</th>
-                    <th>Razon Social</th>
+                    <th>Placa</th>
+                    <th>Marca</th>
+                    <th>Color</th>
+                    <th>Modelo</th>
+                    <th>Capacidad</th>
+                    <th>Transporte</th>
                     <th>Editar</th>
                     <th>Eliminar</th>
                 </thead>
                 <tbody>
-                    @foreach ($datos as $item)
+                    @foreach ($datosCamion as $item)
                     <tr>
-                        <td>{{ $item->id }}</td>
-                        <td>{{ $item->nombre }}</td>
-                        <td>{{ $item->razon_social }}</td>
+                        <td>{{ $item->id_camion}}</td>
+                        <td>{{ $item->placa }}</td>
+                        <td>{{ $item->marca }}</td>
+                        <td>{{ $item->color }}</td>
+                        <td>{{ $item->modelo }}</td>
+                        <td>{{ $item->capacidad }}</td>
+                        <td>{{ $item->id_transporte }}</td>
                         <td></td>
                         <td></td>
                     </tr>
@@ -45,9 +53,6 @@
     <h7>Nos reservamos el derecho de admision</h7>
 
     <br>
-   
-    
- 
     
 </div>
 @endsection
